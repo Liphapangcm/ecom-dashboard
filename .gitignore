@@ -1,16 +1,5 @@
-# Virtual environment
 venv/
-
-# Environment variables (API key)
-.env
-
-# Data files (too large for GitHub)
-data/
-
-# Python cache
+*.zip
 __pycache__/
 *.pyc
-*.pyo
-
-# Streamlit cache
-.streamlit/
+.env
