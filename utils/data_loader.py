@@ -1,12 +1,13 @@
+import os
 import pandas as pd
 
-BASE_URL = "https://raw.githubusercontent.com/nazliander/ecommerce-sales-analysis/master/data/"
+BASE_PATH = os.path.join(os.path.dirname(__file__), "../data/")
 
 def load_data():
-    orders = pd.read_csv(BASE_URL + "olist_orders_dataset.csv")
-    items = pd.read_csv(BASE_URL + "olist_order_items_dataset.csv")
-    products = pd.read_csv(BASE_URL + "olist_products_dataset.csv")
-    customers = pd.read_csv(BASE_URL + "olist_customers_dataset.csv")
+    orders = pd.read_csv(BASE_PATH + "olist_orders_dataset.csv")
+    items = pd.read_csv(BASE_PATH + "olist_order_items_dataset.csv")
+    products = pd.read_csv(BASE_PATH + "olist_products_dataset.csv")
+    customers = pd.read_csv(BASE_PATH + "olist_customers_dataset.csv")
 
     # Parse dates
     date_cols = [
